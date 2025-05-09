@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For You, My Love</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fbe3e2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      background-color: #fff0f6;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 70%;
+      max-width: 500px;
+    }
+
+    .message-box h1 {
+      color: #ff69b4;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .message-box p {
+      color: #ffb6c1;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #ff69b4;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1em;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff3385;
+    }
+
+    .hug-message {
+      display: none;
+      background-color: #ffb6c1;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 10px;
+      font-size: 1.5em;
+      color: #ff69b4;
+    }
+
+    .quote-box {
+      margin-top: 30px;
+      font-size: 1.1em;
+      color: #d76d91;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="message-box">
+      <h1>Hey Beautiful!</h1>
+      <p>I know you’re going through a lot right now, but I just wanted to remind you that I’m here for you. 💖</p>
+      <p>Sending you a virtual hug! 🤗</p>
+      <button id="hugButton">Send a Hug</button>
+    </div>
+    <div id="hugMessage" class="hug-message">
+      <p>🤗 HUG RECEIVED! 🤗</p>
+    </div>
+    <div class="quote-box">
+      <p>"You are amazing, and I am so grateful to have you in my life." - Love,Devansh</p>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("hugButton").addEventListener("click", function() {
+      const hugMessage = document.getElementById("hugMessage");
+      hugMessage.style.display = "block";
+
+      // Hide the hug message after 2 seconds
+      setTimeout(function() {
+        hugMessage.style.display = "none";
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
